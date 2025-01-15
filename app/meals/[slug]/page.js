@@ -4,6 +4,19 @@ import { notFound } from 'next/navigation'
 import styles from './page.module.css'
 import { getMeal } from '@/lib/meals'
 
+export async function generateMetadata ({ params}) {
+    const meal = getMeal(params.slug)
+
+    if(!meal){
+        notFound()
+    }
+    
+    return {
+        title: meal.title,
+        description: meal.summary
+    }
+}
+
 
 
 export default  function MealDetailPage({ params }){
@@ -21,7 +34,11 @@ export default  function MealDetailPage({ params }){
         <>
             <header className={styles.header}>
                 <div className={styles.image}>
-                    <Image src={meal.image} alt={meal.title} fill/>
+                    <Image 
+                        src={`https://jeffrey-food-image.s3.us-west-2.amazonaws.com/${meal.image}`}
+                        alt={meal.title} 
+                        fill
+                    />
                 </div>
                 <div className={styles.headerText}>
                     <h1>{meal.title}</h1>
