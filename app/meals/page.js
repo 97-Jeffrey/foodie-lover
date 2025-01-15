@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { Suspense } from 'react'
-import styles from './page.module.css'
 import MealsGrid from '@/components/meals/meals-grid'
 import { getMeals } from '@/lib/meals'
+
+import styles from '@/styles/meals/meals.module.css'
 
 export const metadata = {
     title: 'All Meals',

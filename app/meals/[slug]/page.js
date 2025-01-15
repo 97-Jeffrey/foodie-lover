@@ -1,8 +1,9 @@
 
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import styles from './page.module.css'
 import { getMeal } from '@/lib/meals'
+
+import styles from '@/styles/meals/slug.module.css'
 
 export async function generateMetadata ({ params}) {
     const meal = getMeal(params.slug)

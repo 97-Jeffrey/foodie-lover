@@ -1,10 +1,12 @@
 import Link from "next/link";
 import LogoImg from '@/assets/logo.png'
-import styles from './main-header.module.css'
+
 import Image from "next/image";
 
 import MainHeaderBackground from "./main-header-background";
 import NavLink from "./nav-link";
+
+import styles from '@/styles/main-header/main-header.module.css'
 
 export default function MainHeader(){
 
