@@ -21,7 +21,11 @@ export default  function MealDetailPage({ params }){
         <>
             <header className={styles.header}>
                 <div className={styles.image}>
-                    <Image src={meal.image} alt={meal.title} fill/>
+                    <Image 
+                        src={`https://jeffrey-food-image.s3.us-west-2.amazonaws.com/${meal.image}`}
+                        alt={meal.title} 
+                        fill
+                    />
                 </div>
                 <div className={styles.headerText}>
                     <h1>{meal.title}</h1>
