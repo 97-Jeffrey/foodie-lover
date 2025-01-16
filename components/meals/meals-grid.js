@@ -1,5 +1,5 @@
 import MealItem from './meal-item'
-import  styles from './meals-grid.module.css'
+import  styles from '@/styles/meals/meals-grid.module.css'
 
 export default function MealsGrid({ meals }){
    return (

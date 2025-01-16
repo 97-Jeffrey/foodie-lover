@@ -1,8 +1,10 @@
 
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import styles from './page.module.css'
 import { getMeal } from '@/lib/meals'
+
+import styles from '@/styles/meals/slug.module.css'
+import MealsIngredients from '@/components/meals/meal-ingredients'
 
 export async function generateMetadata ({ params}) {
     const meal = getMeal(params.slug)
@@ -29,6 +31,9 @@ export default  function MealDetailPage({ params }){
 
 
     meal.instructions = meal.instructions.replace(/\n/g, '<br/>')
+    meal.ingredients = meal.ingredients.split(',')
+
+    
 
     return (
         <>
@@ -46,6 +51,9 @@ export default  function MealDetailPage({ params }){
                         by <a href={`mailto:${meal.creator_email}`}>{meal.creator}</a>
                     </p>
                     <p className={styles.summary}>{meal.summary}</p>
+                    <MealsIngredients 
+                       ingredients={meal.ingredients}
+                    />
 
                 </div>
             </header>

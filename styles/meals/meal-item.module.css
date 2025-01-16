@@ -1,3 +1,7 @@
+.link a{
+  text-decoration: none;
+}
+
 .meal {
     display: flex;
     flex-direction: column;

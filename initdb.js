@@ -6,6 +6,7 @@ const dummyMeals = [
     title: 'Juicy Cheese Burger', 
     slug: 'juicy-cheese-burger',
     image: 'burger.jpg',
+    ingredients:'flour, beef, salt, pepper, lettce, tomato',
     summary:
       'A mouth-watering burger with a juicy beef patty and melted cheese, served in a soft bun.',
     instructions: `
@@ -28,6 +29,7 @@ const dummyMeals = [
     title: 'Spicy Curry',
     slug: 'spicy-curry',
     image: 'curry.jpg',
+    ingredients:'vegetables,coconut milk, cooking oil,curry paste, rice,bread',
     summary:
       'A rich and spicy curry, infused with exotic spices and creamy coconut milk.',
     instructions: `
@@ -53,6 +55,7 @@ const dummyMeals = [
     title: 'Homemade Dumplings',
     slug: 'homemade-dumplings',
     image: 'dumplings.jpg',
+    ingredients:'pork, salt, vegetables, flour, spice',
     summary:
       'Tender dumplings filled with savory meat and vegetables, steamed to perfection.',
     instructions: `
@@ -75,6 +78,7 @@ const dummyMeals = [
     title: 'Classic Mac n Cheese',
     slug: 'classic-mac-n-cheese',
     image: 'macncheese.jpg',
+    ingredients: 'macaroni, butter, milk,cheese,breadcrumbs,parsely',
     summary:
       "Creamy and cheesy macaroni, a comforting classic that's always a crowd-pleaser.",
     instructions: `
@@ -100,6 +104,7 @@ const dummyMeals = [
     title: 'Authentic Pizza',
     slug: 'authentic-pizza',
     image: 'pizza.jpg',
+    ingredients: 'flour, tomato sauce, cheese,breadcrumbs,parsely,ham',
     summary:
       'Hand-tossed pizza with a tangy tomato sauce, fresh toppings, and melted cheese.',
     instructions: `
@@ -122,6 +127,7 @@ const dummyMeals = [
     title: 'Wiener Schnitzel',
     slug: 'wiener-schnitzel',
     image: 'schnitzel.jpg',
+    ingredients:'Veal, schnitzel, potato, egg, breadcrumbs',
     summary:
       'Crispy, golden-brown breaded veal cutlet, a classic Austrian dish.',
     instructions: `
@@ -144,6 +150,7 @@ const dummyMeals = [
     title: 'Fresh Tomato Salad',
     slug: 'fresh-tomato-salad',
     image: 'tomato-salad.jpg',
+    ingredients:'tomato, basil, vinaigrette, olive oil, breadcrumbs',
     summary:
       'A light and refreshing salad with ripe tomatoes, fresh basil, and a tangy vinaigrette.',
     instructions: `
@@ -170,6 +177,7 @@ db.prepare(`
        slug TEXT NOT NULL UNIQUE,
        title TEXT NOT NULL,
        image TEXT NOT NULL,
+       ingredients TEXT NOT NULL,
        summary TEXT NOT NULL,
        instructions TEXT NOT NULL,
        creator TEXT NOT NULL,
@@ -184,6 +192,7 @@ async function initData() {
          @slug,
          @title,
          @image,
+         @ingredients,
          @summary,
          @instructions,
          @creator,

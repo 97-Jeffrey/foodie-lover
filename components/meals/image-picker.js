@@ -1,8 +1,9 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import styles from './image-picker.module.css'
 import Image from 'next/image'
+
+import styles from '@/styles/meals/image-picker.module.css'
 
 export default function ImagePicker({ name, label }){
 
