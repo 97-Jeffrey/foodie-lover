@@ -44,6 +44,10 @@ export default function ShareMealPage() {
                     <input type="text" id="summary" name="summary" required />
                     </p>
                     <p>
+                    <label htmlFor="ingredients">ingredients</label>
+                    <input type="text" id="ingredients" name="ingredients" required />
+                    </p>
+                    <p>
                     <label htmlFor="instructions">Instructions</label>
                     <textarea
                         id="instructions"
