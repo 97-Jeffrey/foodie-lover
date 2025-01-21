@@ -2,6 +2,14 @@
 
 Foodie Lover is a web application designed for food enthusiasts who want to discover, share, and save their favorite recipes for other people to view. The app features an intuitive user interface and a powerful search functionality to make finding delicious meals easier than ever.
 
+## Demo
+
+![first](https://github.com/97-Jeffrey/foodie-lover/blob/master/Doc/Screenshot%202025-01-21%20at%202.04.00%E2%80%AFPM.png?raw=true)
+
+![second](https://github.com/97-Jeffrey/foodie-lover/blob/master/Doc/Screenshot%202025-01-21%20at%202.04.45%E2%80%AFPM.png?raw=true)
+
+![third](https://github.com/97-Jeffrey/foodie-lover/blob/master/Doc/Screenshot%202025-01-21%20at%202.05.08%E2%80%AFPM.png?raw=true)
+
 ## Features
 
 - **View Recipe 🍇**: Quickly Browse for uploaded receipes and detailed summary and instructions.
